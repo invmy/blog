@@ -1,0 +1,84 @@
+media:
+  input: src/assets
+  output: ../../../assets
+content:
+  - name: blog
+    label: blog
+    type: collection
+    path: src/content/blog
+    fields:
+      - name: title
+        type: string
+        required: true
+      - name: description
+        type: string
+        required: true
+      - name: date
+        type: date
+        required: true
+      - name: order
+        type: number
+      - name: tags
+        type: string
+        list: true
+      - name: authors
+        type: reference
+        list: true
+        required: true
+        options:
+          collection: authors
+      - name: image
+        type: image
+      - name: draft
+        type: boolean
+      - name: body
+        type: rich-text
+  - name: authors
+    label: authors
+    type: collection
+    path: src/content/authors
+    fields:
+      - name: name
+        type: string
+        required: true
+      - name: pronouns
+        type: string
+      - name: avatar
+        type: string
+        required: true
+      - name: bio
+        type: string
+      - name: mail
+        type: string
+      - name: socials
+        type: object
+        list: true
+        fields:
+          - name: website
+            type: string
+          - name: twitter
+            type: string
+          - name: github
+            type: string
+  - name: projects
+    label: projects
+    type: collection
+    path: src/content/projects
+    fields:
+      - name: name
+        type: string
+        required: true
+      - name: description
+        type: string
+      - name: link
+        type: string
+        required: true
+      - name: tags
+        type: string
+        list: true
+      - name: image
+        type: image
+      - name: startDate
+        type: date
+      - name: endDate
+        type: date
