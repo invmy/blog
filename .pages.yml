@@ -1,6 +1,6 @@
 media:
-  input: src/assets
-  output: ../../../assets
+  input: src/assets/media
+  output: ../../../assets/media
 content:
   - name: blog
     label: blog
@@ -27,7 +27,8 @@ content:
         required: true
         options:
           collection: authors
-          values: [name]
+          value: "{name}"
+          label: "{name}"
       - name: image
         type: image
       - name: draft

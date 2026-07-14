@@ -5,10 +5,11 @@ date: 2026-07-14
 tags:
   - IBKR
 authors:
-  - src/content/authors/2026-07-14-invmy.md
-image: ../../../assets/hero-ibkr-home-xl.png
+  - invmy
+image: ../../../assets/media/hero-ibkr-home-xl.png
 draft: false
 ---
+
 在 [IBKRAPI](https://www.interactivebrokers.com/campus/ibkr-api-page/)
 页面中可以分为三种API，
 
@@ -16,7 +17,7 @@ draft: false
 - TWS API 基于本地 Socket 通讯的异步事件驱动（Asynchronous Event-Driven）架构
 - Flex API 报表表格专用，每日更新
 
-### Web API
+## Web API
 
 不要被官方文档迷惑 web api 1.0是旧版，而WEB
 API才是新版，不过目前新版WS还没更新，使用1.0API就行了，后续可以直接迁移的。这个API就是标准的REST
@@ -36,7 +37,7 @@ workers上实现真正的个人网关。[IBKR_Gateway-workers](https://github.co
 `api.ibkr.com`
 这个服务器使用akamai作为CDN分发。在大陆的连通性惨不忍睹，只有移动的入口延迟低一点。网关的root文件夹中有个webapps可以在这里写前端HTML+js，这样就不用再运行和进行复杂的链接维持了。
 
-TWS API
+## TWS API
 
 只能通过官方的gateway登录。属于是非常难用的一档了，基于事件的框架。需要自己实现
 链接管理、事件触发、事件回调。
@@ -52,11 +53,11 @@ EWrapper (接收者)：
 
 - node.js版 [https://github.com/stoqey/ibkr](https://github.com/stoqey/ibkr)
 - python版
-[https://github.com/ib-api-reloaded/ib_async](https://github.com/ib-api-reloaded/ib_async)
+  [https://github.com/ib-api-reloaded/ib_async](https://github.com/ib-api-reloaded/ib_async)
 
 选择node.js版还是python？强烈推荐node.js版本，因为已经封装了大部分需要用的api同时还有APInext可以用。几乎大部分端点直接await就能获取。同时搭配bun的elysiajs，快速构建出api服务器。
 
-Flex API
+## Flex API
 
 一个只读的报表API。没什么好讲的。需要切换到英文语言界面才会有flex
 api获取[https://www.interactivebrokers.com/campus/ibkr-api-page/flex-web-service/](https://www.interactivebrokers.com/campus/ibkr-api-page/flex-web-service/)
