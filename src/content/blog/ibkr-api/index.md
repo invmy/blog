@@ -5,11 +5,10 @@ date: 2026-07-14
 tags:
   - IBKR
 authors:
-  - enscribe
+  - src/content/authors/2026-07-14-invmy.md
 image: ../../../assets/hero-ibkr-home-xl.png
 draft: false
 ---
-
 在 [IBKRAPI](https://www.interactivebrokers.com/campus/ibkr-api-page/)
 页面中可以分为三种API，
 
@@ -53,7 +52,7 @@ EWrapper (接收者)：
 
 - node.js版 [https://github.com/stoqey/ibkr](https://github.com/stoqey/ibkr)
 - python版
-  [https://github.com/ib-api-reloaded/ib_async](https://github.com/ib-api-reloaded/ib_async)
+[https://github.com/ib-api-reloaded/ib_async](https://github.com/ib-api-reloaded/ib_async)
 
 选择node.js版还是python？强烈推荐node.js版本，因为已经封装了大部分需要用的api同时还有APInext可以用。几乎大部分端点直接await就能获取。同时搭配bun的elysiajs，快速构建出api服务器。
 
