@@ -27,6 +27,7 @@ content:
         required: true
         options:
           collection: authors
+          values: [name]
       - name: image
         type: image
       - name: draft
